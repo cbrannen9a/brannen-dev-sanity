@@ -40,21 +40,22 @@ export default {
 		{
 			name: 'description',
 			title: 'Description',
-			type: 'blockContent'
+			type: 'text'
 		},
 		{
 			name: 'body',
 			title: 'Body',
 			type: 'blockContent'
-		}
+		},
+		{
+			name: 'url',
+			title: 'Url',
+			type: 'url'
+		},
+		{
+			name: 'publishedAt',
+			title: 'Published at',
+			type: 'datetime'
+		},
 	],
-
-	preview: {
-		select: {
-			title: 'title',
-			description: 'description',
-			skills: 'skills',
-			media: 'mainImage'
-		}
-	}
 }
