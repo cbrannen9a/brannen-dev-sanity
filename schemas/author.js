@@ -42,15 +42,21 @@ export default {
 			]
 		},
 		{
-			title: 'Twitter',
 			name: 'twitter',
+			title: 'Twitter',
 			type: 'url',
 			fieldset: 'social'
 		},
 		{
-			title: 'GitHub',
 			name: 'github',
+			title: 'GitHub',
 			type: 'url',
+			fieldset: 'social'
+		},
+		{
+			name: 'email',
+			title: 'Email',
+			type: 'string',
 			fieldset: 'social'
 		},
 	],
