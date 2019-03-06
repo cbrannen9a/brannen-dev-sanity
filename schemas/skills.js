@@ -12,6 +12,23 @@ export default {
 			name: 'description',
 			title: 'Description',
 			type: 'blockContent'
-		}
+		},
+		{
+			name: 'group',
+			title: 'Group',
+			type: 'number'
+		},
+		{
+			name: 'subGroup',
+			title: 'Sub Group',
+			type: 'number'
+
+		},
+		{
+			name: 'order',
+			title: 'Order',
+			type: 'number'
+
+		},
 	]
 }
