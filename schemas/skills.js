@@ -30,5 +30,28 @@ export default {
 			type: 'number'
 
 		},
+	],
+	orderings: [
+		{
+			title: 'Group, Order',
+			name: 'groupAsc',
+			by: [
+				{ field: 'group', direction: 'asc' }
+			]
+		},
+		{
+			title: 'SubGroup, Order',
+			name: 'subGroupAsc',
+			by: [
+				{ field: 'subGroup', direction: 'asc' }
+			]
+		},
+		{
+			title: 'Order, Order',
+			name: 'orderAsc',
+			by: [
+				{ field: 'order', direction: 'asc' }
+			]
+		}
 	]
 }
