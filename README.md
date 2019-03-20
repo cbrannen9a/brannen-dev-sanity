@@ -1,13 +1,22 @@
-# Sanity Blogging Content Studio
+<p align="center">
+  <a href="https://brannen.dev">
+    <img alt="Brannen.dev" src=".\assets\brannen-icon.png" width="60" />
+  </a>
+</p>
+<h1 align="center">
+ 	Brannen.dev
+</h1>
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+Sanity CMS for Portfolio site [brannen.dev](https://brannen.dev)
 
-Now you can do the following things:
+The site uses [Gatsby](https://www.gatsbyjs.org/) and [Sanity.io](https://www.sanity.io/) along with custom styling of [rbx](https://dfee.github.io/rbx/) it is deploy via [Firebase Hosting](https://firebase.google.com/)
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- Check out the example frontend: [React/Next.js](https://github.com/sanity-io/tutorial-sanity-blog-react-next)
-- [Read the blog post about this template](https://www.sanity.io/blog/build-your-own-blog-with-sanity-and-next-js?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+### Setup
 
-GraphQL deployed to https://o44u55ke.api.sanity.io/v1/graphql/production/default
+This project is based on the [Sanity.io](https://www.sanity.io/) blog starter.
+
+To get the develop server running just use `yarn start` after dependencies are installed.
+
+The Gatsby project is available in a separate repo [here](https://github.com/cbrannen9a/brannen-dev)
+
+🚀
