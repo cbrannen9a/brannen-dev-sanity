@@ -21,6 +21,14 @@ export default {
             options: {
                 isHighlighted: true
             }
+        },
+        {
+            name: 'width',
+            title: 'Width (optional)',
+            type: 'number',
+            options: {
+                isHighlighted: true
+            }
         }
     ]
 };
