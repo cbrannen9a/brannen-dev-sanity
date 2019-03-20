@@ -35,7 +35,8 @@ export default {
                 // preference or highlighting by editors.
                 decorators: [
                     { title: 'Strong', value: 'strong' },
-                    { title: 'Emphasis', value: 'em' }
+                    { title: 'Emphasis', value: 'em' },
+                    { title: 'Code', value: 'code' }
                 ],
                 // Annotations can be any object structure – e.g. a link or a footnote.
                 annotations: [
@@ -60,6 +61,11 @@ export default {
         {
             type: 'image',
             options: { hotspot: true }
+        },
+        {
+            title: 'CodeBlock',
+            name: 'code',
+            type: 'code'
         }
     ]
 };
