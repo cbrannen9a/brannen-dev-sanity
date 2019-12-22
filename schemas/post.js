@@ -43,11 +43,6 @@ export default {
       type: "datetime"
     },
     {
-      name: "isDraft",
-      title: "Is Draft",
-      type: "boolean"
-    },
-    {
       name: "description",
       title: "Description",
       type: "text"
@@ -70,8 +65,5 @@ export default {
         subtitle: author && `by ${author}`
       });
     }
-  },
-  initialValue: {
-    isDraft: true
   }
 };
