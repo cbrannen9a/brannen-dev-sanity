@@ -12,6 +12,9 @@ jobs:
             - run: yarn install
             - run: SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN yarn deploy
 workflows:
-    build-and-deploy:
-      jobs:
-        - build-and-deploy
+  build-and-deploy:
+    jobs:
+      - build-and-deploy:
+          filters:
+            branches:
+              only: master
