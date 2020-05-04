@@ -9,7 +9,7 @@
 
 Sanity CMS for Portfolio site [brannen.dev](https://brannen.dev)
 
-The site uses [Gatsby](https://www.gatsbyjs.org/) and [Sanity.io](https://www.sanity.io/) along with custom styling of [rbx](https://dfee.github.io/rbx/) it is deploy via [Firebase Hosting](https://firebase.google.com/)
+The site uses [Gatsby](https://www.gatsbyjs.org/) and [Sanity.io](https://www.sanity.io/) it is deploy via [Firebase Hosting](https://firebase.google.com/)
 
 ### Setup
 

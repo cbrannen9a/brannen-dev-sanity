@@ -1,17 +1,37 @@
-/**
- * This is the schema definition for the rich text fields used for
- * for this blog studio. When you import it in schemas.js it can be
- * reused in other parts of the studio with:
- *  {
- *    name: 'someName',
- *    title: 'Some title',
- *    type: 'blockContent'
- *  }
- */
+import React from "react";
+import { BlockEditor } from "part:@sanity/form-builder";
+
+// should probably extract this into its own file
+const SpellingCheckEditor = (props) => {
+  const ref = React.createRef();
+
+  React.useEffect(() => {
+    const containerEl = ref.current;
+    if (!containerEl) return;
+
+    const editor = containerEl.querySelector('[data-slate-editor="true"]');
+
+    editor && editor.setAttribute("spellcheck", true);
+  }, [ref]);
+
+  return (
+    <div ref={ref}>
+      <BlockEditor {...props} />
+    </div>
+  );
+};
+
+class CustomEditor extends React.Component {
+  render() {
+    return <SpellingCheckEditor {...this.props} />;
+  }
+}
+
 export default {
   title: "Block Content",
   name: "blockContent",
   type: "array",
+  inputComponent: CustomEditor,
   of: [
     {
       title: "Block",
@@ -26,7 +46,7 @@ export default {
         { title: "H2", value: "h2" },
         { title: "H3", value: "h3" },
         { title: "H4", value: "h4" },
-        { title: "Quote", value: "blockquote" }
+        { title: "Quote", value: "blockquote" },
       ],
       lists: [{ title: "Bullet", value: "bullet" }],
       // Marks let you mark up inline text in the block editor.
@@ -36,7 +56,7 @@ export default {
         decorators: [
           { title: "Strong", value: "strong" },
           { title: "Emphasis", value: "em" },
-          { title: "Code", value: "code" }
+          { title: "Code", value: "code" },
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -48,24 +68,24 @@ export default {
               {
                 title: "URL",
                 name: "href",
-                type: "url"
-              }
-            ]
-          }
-        ]
-      }
+                type: "url",
+              },
+            ],
+          },
+        ],
+      },
     },
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     {
       title: "Image",
-      type: "figure"
+      type: "figure",
     },
     {
       title: "CodeBlock",
       name: "code",
-      type: "code"
-    }
-  ]
+      type: "code",
+    },
+  ],
 };
