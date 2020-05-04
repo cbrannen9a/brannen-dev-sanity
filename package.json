@@ -27,6 +27,6 @@
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "sanity": "^1.149.7"
+    "@sanity/cli": "^1.149.9"
   }
 }
