@@ -6,7 +6,7 @@ export default {
     {
       name: "title",
       title: "Title",
-      type: "string"
+      type: "string",
     },
     {
       name: "slug",
@@ -14,48 +14,42 @@ export default {
       type: "slug",
       options: {
         source: "title",
-        maxLength: 96
-      }
-    },
-    {
-      name: "author",
-      title: "Author",
-      type: "reference",
-      to: { type: "author" }
+        maxLength: 96,
+      },
     },
     {
       name: "mainImage",
       title: "Main image",
       type: "image",
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
       name: "skills",
       title: "Skills",
       type: "array",
-      of: [{ type: "reference", to: { type: "skills" } }]
+      of: [{ type: "reference", to: { type: "skills" } }],
     },
     {
       name: "description",
       title: "Description",
-      type: "text"
+      type: "text",
     },
     {
       name: "body",
       title: "Body",
-      type: "blockContent"
+      type: "blockContent",
     },
     {
       name: "url",
       title: "Url",
-      type: "url"
+      type: "url",
     },
     {
       name: "publishedAt",
       title: "Published at",
-      type: "datetime"
-    }
-  ]
+      type: "datetime",
+    },
+  ],
 };

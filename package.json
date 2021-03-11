@@ -17,12 +17,12 @@
   "dependencies": {
     "@sanity/base": "^2.6.0",
     "@sanity/code-input": "^2.2.6",
+    "@sanity/color-input": "^2.2.6",
     "@sanity/components": "^2.2.6",
     "@sanity/core": "^2.6.1",
     "@sanity/default-layout": "^2.6.0",
     "@sanity/default-login": "^2.2.6",
     "@sanity/desk-tool": "^2.6.1",
-    "prop-types": "^15.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
