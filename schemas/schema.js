@@ -7,6 +7,7 @@ import author from "./author";
 import blockContent from "./blockContent";
 import category from "./category";
 import figure from "./figure";
+import page from "./page";
 import post from "./post";
 import project from "./project";
 import skills from "./skills";
@@ -21,6 +22,8 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     post,
+    figure,
+    page,
     author,
     category,
     skills,
@@ -28,6 +31,5 @@ export default createSchema({
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
-    figure
-  ])
+  ]),
 });
