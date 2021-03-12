@@ -8,18 +8,28 @@
     "dataset": "production"
   },
   "plugins": [
+    "@sanity/dashboard",
     "@sanity/base",
     "@sanity/components",
     "@sanity/color-input",
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "@sanity/code-input"
+    "@sanity/code-input",
+    "dashboard-widget-structure-menu"
   ],
   "parts": [
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema.js"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "./dashboardConfig.js"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./deskStructure.js"
     }
   ]
 }
