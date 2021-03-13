@@ -22,16 +22,6 @@ export default {
       title: "Brand",
     },
     {
-      name: "brandWidth",
-      type: "number",
-      title: "Brand Width",
-    },
-    {
-      name: "brandHeight",
-      type: "number",
-      title: "Brand Height",
-    },
-    {
       type: "color",
       name: "primaryColor",
       title: "Primary color",
