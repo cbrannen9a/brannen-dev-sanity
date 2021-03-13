@@ -1,6 +1,7 @@
 import { Link } from "part:@sanity/base/router";
 import FolderIcon from "part:@sanity/base/folder-icon";
 import FileIcon from "part:@sanity/base/file-icon";
+
 import React from "react";
 import styles from "./StructureMenuWidget.css";
 
@@ -11,7 +12,6 @@ function getIconComponent(item) {
 }
 
 function StructureMenuWidget(props) {
-  console.log(props);
   return (
     <div className={styles.root}>
       <div className={styles.header}>
@@ -19,23 +19,21 @@ function StructureMenuWidget(props) {
       </div>
 
       <div className={styles.content}>
-        {props.structure.items.map((item) => {
-          if (item.type === "divider") {
-            return <div className={styles.divider}> </div>;
-          }
-
-          const Icon = getIconComponent(item);
-          return (
-            <div key={item.id}>
-              <Link className={styles.link} href={`/desk/${item.id}`}>
-                <div className={styles.iconWrapper}>
-                  <Icon />
-                </div>
-                <div>{item.title}</div>
-              </Link>
-            </div>
-          );
-        })}
+        {props.structure.items
+          .filter((item) => item.type !== "divider")
+          .map((item) => {
+            const Icon = getIconComponent(item);
+            return (
+              <div key={item.id}>
+                <Link className={styles.link} href={`/desk/${item.id}`}>
+                  <div className={styles.iconWrapper}>
+                    <Icon />
+                  </div>
+                  <div>{item.title}</div>
+                </Link>
+              </div>
+            );
+          })}
       </div>
     </div>
   );

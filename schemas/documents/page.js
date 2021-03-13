@@ -5,41 +5,31 @@ export default {
   fields: [
     {
       name: "title",
-      title: "Title",
       type: "string",
+      title: "Title",
     },
     {
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: {
-        source: "title",
-        maxLength: 96,
-      },
+      name: "route",
+      title: "Route",
+      type: "reference",
+      to: [{ type: "route" }],
     },
     {
-      name: "mainImage",
-      title: "Main image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: "description",
-      title: "Description",
-      type: "text",
-    },
-    {
-      name: "body",
-      title: "Body",
-      type: "blockContent",
-    },
-    {
-      name: "skills",
-      title: "Skills",
+      name: "content",
       type: "array",
-      of: [{ type: "reference", to: { type: "skills" } }],
+      title: "Page sections",
+      description: "Add, edit, and reorder sections",
+      of: [
+        // { type: "pricing" },
+        // { type: "uiComponentRef" },
+        { type: "hero" },
+        { type: "cards" },
+        { type: "banner" },
+        { type: "social" },
+        // { type: "infoRows" },
+        // { type: "ctaColumns" },
+        // { type: "ctaPlug" },
+      ],
     },
   ],
 };

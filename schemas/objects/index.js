@@ -1,2 +1,10 @@
+export { default as banner } from "./banner";
 export { default as blockContent } from "./blockContent";
+export { default as card } from "./card";
+export { default as cards } from "./cards";
+export { default as cta } from "./cta";
 export { default as figure } from "./figure";
+export { default as hero } from "./hero";
+export { default as simpleBlockContent } from "./simpleBlockContent";
+export { default as social } from "./social";
+export { default as socialLink } from "./socialLink";

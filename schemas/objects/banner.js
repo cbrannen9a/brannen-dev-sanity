@@ -1,0 +1,45 @@
+export default {
+  type: "object",
+  name: "banner",
+  title: "Banner",
+  fields: [
+    {
+      name: "label",
+      type: "string",
+    },
+    {
+      name: "heading",
+      type: "string",
+      title: "Heading",
+    },
+    {
+      name: "subHeading",
+      type: "string",
+      title: "Sub Heading",
+    },
+    {
+      name: "ctas",
+      Title: "CTAS",
+      type: "array",
+      of: [
+        {
+          name: "cta",
+          type: "cta",
+        },
+      ],
+    },
+  ],
+
+  preview: {
+    select: {
+      label: "label",
+      heading: "heading",
+    },
+    prepare({ label, heading }) {
+      return {
+        title: `Banner Section: ${label || "Label not set"}`,
+        subtitle: `${heading}`,
+      };
+    },
+  },
+};
