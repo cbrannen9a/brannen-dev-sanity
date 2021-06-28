@@ -21,6 +21,7 @@ import {
   simpleBlockContent,
   social,
   socialLink,
+  contentPreview,
 } from "./objects";
 
 export default createSchema({
@@ -40,6 +41,7 @@ export default createSchema({
     card,
     cards,
     cta,
+    contentPreview,
     figure,
     hero,
     simpleBlockContent,

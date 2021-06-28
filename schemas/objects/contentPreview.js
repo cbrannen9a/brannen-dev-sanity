@@ -1,7 +1,7 @@
 export default {
   type: "object",
-  name: "banner",
-  title: "Banner",
+  name: "contentPreview",
+  title: "Content Preview",
   fields: [
     {
       name: "label",
@@ -23,15 +23,21 @@ export default {
       title: "Aria Heading",
     },
     {
-      name: "ctas",
-      Title: "CTAS",
-      type: "array",
-      of: [
-        {
-          name: "cta",
-          type: "cta",
-        },
-      ],
+      name: "maxItems",
+      title: "Max Items",
+      type: "number",
+      validation: (Rule) => Rule.required().min(0).positive(),
+    },
+    {
+      name: "type",
+      title: "Type",
+      type: "string",
+      options: {
+        list: [
+          { title: "Posts", value: "posts" },
+          { title: "Projects", value: "projects" },
+        ],
+      },
     },
   ],
 
@@ -42,7 +48,7 @@ export default {
     },
     prepare({ label, heading }) {
       return {
-        title: `Banner Section: ${label || "Label not set"}`,
+        title: `Content Preview Section: ${label || "Label not set"}`,
         subtitle: `${heading}`,
       };
     },

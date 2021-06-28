@@ -26,6 +26,7 @@ export default {
         { type: "cards" },
         { type: "banner" },
         { type: "social" },
+        { type: "contentPreview" },
         // { type: "infoRows" },
         // { type: "ctaColumns" },
         // { type: "ctaPlug" },

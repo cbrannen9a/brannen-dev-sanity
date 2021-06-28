@@ -8,6 +8,21 @@ export default {
       type: "string",
     },
     {
+      name: "heading",
+      type: "string",
+      title: "Heading",
+    },
+    {
+      name: "subHeading",
+      type: "string",
+      title: "Sub Heading",
+    },
+    {
+      name: "ariaHeading",
+      type: "string",
+      title: "Aria Heading",
+    },
+    {
       name: "social",
       Title: "Social",
       type: "array",

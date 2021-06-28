@@ -18,6 +18,11 @@ export default {
       title: "Sub Heading",
     },
     {
+      name: "ariaHeading",
+      type: "string",
+      title: "Aria Heading",
+    },
+    {
       name: "tagline",
       type: "simpleBlockContent",
     },

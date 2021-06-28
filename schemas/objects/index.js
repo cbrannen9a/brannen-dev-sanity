@@ -2,6 +2,7 @@ export { default as banner } from "./banner";
 export { default as blockContent } from "./blockContent";
 export { default as card } from "./card";
 export { default as cards } from "./cards";
+export { default as contentPreview } from "./contentPreview";
 export { default as cta } from "./cta";
 export { default as figure } from "./figure";
 export { default as hero } from "./hero";
