@@ -7,31 +7,31 @@
   "author": "Chris Brannen <cbrannen@outlook.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "sanity start",
-    "build": "sanity build",
+    "start": "SANITY_STUDIO_API_DATASET=development sanity start",
     "test": "sanity check",
-    "deploy": "sanity deploy && sanity graphql deploy --playground --force --generation gen3"
+    "graphql-deploy": "SANITY_AUTH_TOKEN=$SANITY_API_WRITE_TOKEN SANITY_STUDIO_API_DATASET=$SANITY_STUDIO_API_DATASET sanity graphql deploy --force",
+    "build": "SANITY_AUTH_TOKEN=$SANITY_API_WRITE_TOKEN SANITY_STUDIO_API_DATASET=$SANITY_STUDIO_API_DATASET sanity build public -y && yarn graphql-deploy"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^2.10.0",
-    "@sanity/code-input": "^2.9.0",
-    "@sanity/color-input": "^2.2.6",
+    "@sanity/base": "^2.12.2",
+    "@sanity/code-input": "^2.12.2",
+    "@sanity/color-input": "^2.11.0",
     "@sanity/components": "^2.2.6",
-    "@sanity/core": "^2.10.0",
-    "@sanity/default-layout": "^2.10.0",
-    "@sanity/default-login": "^2.8.0",
-    "@sanity/desk-tool": "^2.10.1",
-    "@sanity/vision": "^2.10.0",
+    "@sanity/core": "^2.12.2",
+    "@sanity/default-layout": "^2.12.2",
+    "@sanity/default-login": "^2.11.1",
+    "@sanity/desk-tool": "^2.12.2",
+    "@sanity/vision": "^2.11.2",
     "prop-types": "^15.7",
     "react": "^17.0",
     "react-dom": "^17.0",
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
-    "@sanity/cli": "^2.10.0"
+    "@sanity/cli": "^2.12.2"
   },
   "repository": {
     "type": "git",
